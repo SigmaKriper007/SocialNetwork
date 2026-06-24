@@ -1,0 +1,60 @@
+{% load static %}
+<section class="chat-messages-block">
+    <div class="chat-block-header">
+        <div class="chat-block-icon-wrap">
+            <img src="{% static 'chat_app/images/PersonalChat.svg' %}" alt="Повідомлення">
+            {% if total_unread > 0 %}
+                <span class="chat-block-total-badge">{{ total_unread }}</span>
+            {% endif %}
+        </div>
+        <span class="chat-block-title">Повідомлення</span>
+    </div>
+
+    {% for item in personal_chats %}
+        {% with other=item.other_user last=item.last_message unread=item.unread_count %}
+        <button
+            type="button"
+            class="chat-user-button chat-user-button--rich"
+            data-chat-user="{{ other.id }}"
+            data-chat-username="{{ other.username|default:other.email }}"
+            data-is-group="false"
+        >
+            <div class="chat-user-avatar">
+                {% if other.avatar %}
+                    <img src="{{ other.avatar.url }}" alt="">
+                {% else %}
+                    {{ other.username|default:other.email|slice:":2"|upper }}
+                {% endif %}
+                {% if unread > 0 %}
+                    <span class="chat-unread-badge">{{ unread }}</span>
+                {% endif %}
+                <img
+                    class="chat-contact-status"
+                    data-status-id="{{ other.id }}"
+                    data-status-size="small"
+                    src="{% if other.is_online %}{% static 'chat_app/images/status_online_small.svg' %}{% else %}{% static 'chat_app/images/status_offline_small.svg' %}{% endif %}"
+                    alt=""
+                >
+            </div>
+
+            <div class="chat-user-info">
+                <div class="chat-user-top">
+                    <span class="chat-user-name">{{ other.username|default:other.email }}</span>
+                    {% if last %}
+                        <span class="chat-user-time">{{ last.created_at|date:"H:i" }}</span>
+                    {% endif %}
+                </div>
+                <div class="chat-user-preview">
+                    {% if last %}
+                        {{ last.text|truncatechars:30 }}
+                    {% else %}
+                        Немає повідомлень
+                    {% endif %}
+                </div>
+            </div>
+        </button>
+        {% endwith %}
+    {% empty %}
+        <p>Чатів поки немає</p>
+    {% endfor %}
+</section>

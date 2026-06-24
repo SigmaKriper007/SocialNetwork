@@ -39,12 +39,13 @@ It was built as a **learning project**, and that's exactly where its value lies 
 - It contains real, relatable bugs and trade-offs (see [Conclusion](#7-conclusion)) — useful to study *and* to practice refactoring on.
 
 ### 2. Team
-> ⚠️ The links below were reconstructed automatically from the project's Git history (commit authors) and the GitHub repository owner — **please double-check and correct them** if any name/handle is wrong.
 
-| Member | Role (based on commit history) | GitHub |
-|---|---|---|
-| Yaroslav (repository owner) | Core backend & overall architecture, `user_app`, `chat_app`, `home_app`, frontend layout | [github.com/YaroslavEngel](https://github.com/YaroslavEngel) |
-| SigmaKriper007 | `post_app` — posts, tags, likes | [github.com/SigmaKriper007](https://github.com/SigmaKriper007) |
+| Member | GitHub |
+|---|---|
+| Yaroslav (YaroslavEngel) | [github.com/YaroslavEngel](https://github.com/YaroslavEngel) |
+| SigmaKriper007 | [github.com/SigmaKriper007](https://github.com/SigmaKriper007) |
+| Maxim Andreev | [github.com/MaximAndreev2303](https://github.com/MaximAndreev2303) |
+| Denis Havilo | [github.com/HaviloDenis](https://github.com/HaviloDenis) |
 
 ### 4. Modules & technologies
 
@@ -168,12 +169,13 @@ This README is written in **two languages**: English (above) and Ukrainian (belo
 - У ньому є реальні, життєві недоліки й компроміси (див. [Висновок](#7-висновок-по-роботі)) — їх корисно як вивчати, так і тренуватися виправляти.
 
 ### 2. Склад команди
-> ⚠️ Посилання нижче відновлено автоматично на основі історії Git-комітів та власника репозиторію на GitHub — **будь ласка, перевірте та виправте**, якщо якесь ім'я чи нік вказано неправильно.
 
-| Учасник | Роль (за історією комітів) | GitHub |
-|---|---|---|
-| Yaroslav (власник репозиторію) | Основний backend і архітектура проєкту, `user_app`, `chat_app`, `home_app`, верстка фронтенду | [github.com/YaroslavEngel](https://github.com/YaroslavEngel) |
-| SigmaKriper007 | `post_app` — публікації, теги, лайки | [github.com/SigmaKriper007](https://github.com/SigmaKriper007) |
+| Учасник | GitHub |
+|---|---|
+| Yaroslav (YaroslavEngel) | [github.com/YaroslavEngel](https://github.com/YaroslavEngel) |
+| SigmaKriper007 | [github.com/SigmaKriper007](https://github.com/SigmaKriper007) |
+| Maxim Andreev | [github.com/MaximAndreev2303](https://github.com/MaximAndreev2303) |
+| Denis Havilo | [github.com/HaviloDenis](https://github.com/HaviloDenis) |
 
 ### 4. Перелік модулів та технологій
 
@@ -268,3 +270,5 @@ python manage.py runserver
 - Покращити пошук і фільтрацію публікацій та користувачів, уніфікувати пагінацію/довантаження на всіх сторінках зі списками.
 - Контейнеризувати проєкт за допомогою Docker та додати інструкцію з деплою (Nginx + Daphne/Gunicorn + PostgreSQL + Redis).
 
+### 8. Примітка щодо мов
+Цей README написаний **двома мовами**: англійською (вище) та українською (нижче), щоб він був зрозумілим як міжнародній, так і україномовній аудиторії учасників/рецензентів.
